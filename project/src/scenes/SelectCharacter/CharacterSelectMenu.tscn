@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/dialogBox-removebg-preview.png" type="Texture" id=1]
 [ext_resource path="res://assets/characters/cyborg_icon.PNG" type="Texture" id=2]
 [ext_resource path="res://assets/characters/rick_icon.PNG" type="Texture" id=3]
+[ext_resource path="res://assets/characters/jazz_icon.PNG" type="Texture" id=4]
+[ext_resource path="res://assets/descriptionBox.png" type="Texture" id=5]
+[ext_resource path="res://src/scenes/SelectCharacter/CharacterSelectMenu.gd" type="Script" id=6]
 
 [node name="CharacterSelectMenu" type="Node"]
+script = ExtResource( 6 )
 
 [node name="ImageSprite" type="Sprite" parent="."]
 position = Vector2( 511.45, 371.527 )
@@ -16,8 +20,8 @@ margin_left = 196.622
 margin_top = 484.944
 margin_right = 297.622
 margin_bottom = 555.944
-text = "Ray"
-icon = ExtResource( 2 )
+text = "Jazz"
+icon = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -43,3 +47,23 @@ icon = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="DescriptionBox" type="Sprite" parent="."]
+position = Vector2( 506.22, 91.6578 )
+scale = Vector2( 1, 0.86882 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="DescriptionBox"]
+margin_left = -220.0
+margin_top = -80.0
+margin_right = 218.0
+margin_bottom = 135.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Sample Text "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="SelectButtonJazz" to="." method="_on_SelectButtonJazz_pressed"]
+[connection signal="pressed" from="SelectButtonRick" to="." method="_on_SelectButtonRick_pressed"]
+[connection signal="pressed" from="SelectButtonRay" to="." method="_on_SelectButtonRay_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/earthBackground.png" type="Texture" id=1]
 [ext_resource path="res://assets/scifi_5a2d.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://src/scenes/SelectCharacter/CharacterSelectMenu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/scenes/SelectCharacter/CyborgCharacter.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/scenes/SelectCharacter/RickCharacter.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/scenes/SelectCharacter/JazzCharacter.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/scenes/SelectCharacter/SelectCharacter.gd" type="Script" id=8]
 
 [sub_resource type="TileSet" id=1]
 0/name = "scifi_5a2d.png 0"
@@ -37,7 +39,8 @@
 1/shapes = [  ]
 1/z_index = 0
 
-[node name="Node2D" type="Node2D"]
+[node name="SelectCharacter" type="Node2D"]
+script = ExtResource( 8 )
 
 [node name="CharacterSelectMenu" parent="." instance=ExtResource( 4 )]
 
@@ -52,7 +55,10 @@ format = 1
 tile_data = PoolIntArray( 458752, 0, 0, 458767, 0, 0, 524288, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 1, 0, 589839, 0, 0 )
 
 [node name="CyborgCharacter" parent="." instance=ExtResource( 5 )]
-position = Vector2( 789.633, 283.031 )
+position = Vector2( 820.553, 280.653 )
 
 [node name="RickCharacter" parent="." instance=ExtResource( 6 )]
-position = Vector2( 561.306, 273.518 )
+position = Vector2( 556.549, 273.518 )
+
+[node name="JazzCharacter" parent="." instance=ExtResource( 7 )]
+position = Vector2( 298.491, 274.707 )
