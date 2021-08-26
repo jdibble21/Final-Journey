@@ -30,3 +30,12 @@ func _on_SelectButton_pressed():
 	print(selected_character)
 	
 	
+func _on_CancelButton_pressed():
+	$DescriptionBox/ConfirmPanel.hide()
+
+
+func _on_ConfirmButton_pressed():
+	#move to next gameplay scene
+	$DescriptionBox.hide()
+	$DescriptionBox/ConfirmPanel.hide()
+	print(selected_character+" character confirmed to play")

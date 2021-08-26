@@ -89,17 +89,23 @@ margin_top = 94.5275
 margin_right = 120.063
 margin_bottom = 114.527
 text = "Confirm"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="DescriptionBox/ConfirmPanel"]
 margin_left = 30.4555
 margin_top = 16.1267
 margin_right = 221.455
 margin_bottom = 61.1267
-text = "Are you sure you want to choose this character?"
+text = "Are you sure you want to play as this character?"
 align = 1
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Button" type="Button" parent="DescriptionBox/ConfirmPanel"]
+[node name="CancelButton" type="Button" parent="DescriptionBox/ConfirmPanel"]
 margin_left = 139.0
 margin_top = 94.0
 margin_right = 203.0
@@ -110,3 +116,5 @@ text = "Cancel"
 [connection signal="pressed" from="SelectButtonRick" to="." method="_on_SelectButtonRick_pressed"]
 [connection signal="pressed" from="SelectButtonRay" to="." method="_on_SelectButtonRay_pressed"]
 [connection signal="pressed" from="DescriptionBox/SelectButton" to="." method="_on_SelectButton_pressed"]
+[connection signal="pressed" from="DescriptionBox/ConfirmPanel/ConfirmButton" to="." method="_on_ConfirmButton_pressed"]
+[connection signal="pressed" from="DescriptionBox/ConfirmPanel/CancelButton" to="." method="_on_CancelButton_pressed"]

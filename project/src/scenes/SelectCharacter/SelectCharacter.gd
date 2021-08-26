@@ -5,3 +5,5 @@ func _ready():
 	$CharacterSelectMenu/DescriptionBox.hide()
 	$CharacterSelectMenu/DescriptionBox/ConfirmPanel.hide()
 
+
+	
